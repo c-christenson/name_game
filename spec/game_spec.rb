@@ -15,12 +15,11 @@ feature 'homepage' do
   end
 end
 
-
 feature 'start playing' do
 
   scenario 'the user sees a picture' do
     visit '/game'
-    expect(page).to have_xpath("/public/images/badass.png")
+    expect(page).to have_css("img[src*='image/badass.png']")
   end
 
 end
