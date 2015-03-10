@@ -1,5 +1,4 @@
-# require_relative '../app/model/game'
-
+require 'capybara/rspec'
 require 'spec_helper'
 
 feature 'homepage' do
@@ -8,8 +7,5 @@ feature 'homepage' do
     visit '/'
     expect(page).to have_content("Start Game")
   end
-
-
-
 
 end
