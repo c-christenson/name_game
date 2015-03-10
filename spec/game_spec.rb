@@ -1,6 +1,6 @@
-require_relative '../app/model/game'
+# require_relative '../app/model/game'
 
-require 'capybara/rspec'
+require 'spec_helper'
 
 feature 'homepage' do
 
