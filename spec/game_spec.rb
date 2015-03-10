@@ -22,4 +22,9 @@ feature 'start playing' do
     expect(page).to have_css("img[src*='image/badass.png']")
   end
 
+  scenario 'the user sees name options' do 
+    visit '/game'
+    expect(page).to have_content("Quokka")
+  end
+
 end
