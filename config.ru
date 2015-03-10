@@ -1,1 +1,4 @@
-require './app/model/game'
+require 'rubygems'
+require './app/server.rb'
+
+run NameGame
