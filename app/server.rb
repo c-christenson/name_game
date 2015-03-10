@@ -1,9 +1,16 @@
 require 'sinatra/base'
 
-class NameGame < Sinatra::Base 
+class NameGame < Sinatra::Base
   get '/' do
-  erb :index
+    erb :index
   end
+
+  get '/game' do
+    erb :game
+  end
+
+
+
 end
 
 
