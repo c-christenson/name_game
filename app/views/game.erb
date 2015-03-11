@@ -1,11 +1,9 @@
-<center><img src="image/badass.png"/></center>
-
-<h3><a href="/game" name="Quokka">Quokka</a></h3>\
+<h1> Makers Name Game </h1>
 
 
 <h3> 
   <% @maker.each do |maker| %>
   <%= maker.name %>
-  <%= maker.path %>
+  <img src="<%= maker.path %>"/>
   <% end %>
 </h3>

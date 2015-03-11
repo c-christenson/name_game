@@ -15,16 +15,23 @@ feature 'homepage' do
   end
 end
 
+
+
 feature 'start playing' do
+
+  before(:each) { 
+      Maker.create(name: 'sean',
+                  path: '/public/images/sean.jpeg')
+}
 
   scenario 'the user sees a picture' do
     visit '/game'
-    expect(page).to have_css("img[src*='image/badass.png']")
+    expect(page).to have_css("img[src*='images/sean.jpeg']")
   end
 
   scenario 'the user sees name options' do 
     visit '/game'
-    expect(page).to have_content("Quokka")
+    expect(page).to have_content("sean")
   end
 
 end
