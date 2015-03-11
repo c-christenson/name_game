@@ -22,9 +22,10 @@ class NameGame < Sinatra::Base
   end
 
   get '/game' do
+    @maker = Maker.all
+    puts @maker.inspect
     erb :game
   end
-
 
 
 end
