@@ -1,9 +1,15 @@
 <h1> Makers Name Game </h1>
 
-
 <h3> 
-  <% @maker.each do |maker| %>
-  <%= maker.name %>
-  <img src="<%= maker.path %>"/>
-  <% end %>
+  <center>
+    <img src="<%= @single_maker.path %>"/>
+  </center>
+</h3>
+
+<h3>
+  <center>
+    <% @maker_random.each do |maker| %>
+      <%= maker.name %>
+    <% end %>
+  </center>
 </h3>
