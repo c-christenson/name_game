@@ -6,10 +6,20 @@
   </center>
 </h3>
 
-<h3>
-  <center>
-    <% @maker_random.each do |maker| %>
-      <%= maker.name %>
-    <% end %>
-  </center>
-</h3>
+<% @maker_random.each do |maker| %>
+  
+ <% if maker == @single_maker %>
+
+  <form action="/winner" method="post">
+    <input type="submit" value="<%= maker.name %>" class="button">
+  </form>  
+
+  <% else %>
+
+    <form action="/loser" method="post">
+    <input type="submit" value="<%= maker.name %>" class="button">
+  </form> 
+
+<% end %>
+
+<% end %>

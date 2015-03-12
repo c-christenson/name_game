@@ -31,6 +31,14 @@ class NameGame < Sinatra::Base
     erb :game
   end
 
+post '/winner' do
+  erb :winner
+end
+
+post '/loser' do
+  erb :loser
+end
+
 
 end
 
