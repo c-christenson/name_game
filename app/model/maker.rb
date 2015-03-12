@@ -1,9 +1,9 @@
 class Maker
 
-    include DataMapper::Resource
+  include DataMapper::Resource
 
-    property :id, Serial
-    property :name, String
-    property :path, FilePath 
+  property :id, Serial
+  property :name, String
+  property :path, FilePath
 
 end

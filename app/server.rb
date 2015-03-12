@@ -22,7 +22,12 @@ class NameGame < Sinatra::Base
   end
 
   get '/game' do
-    @maker = Maker.all
+    @maker = Maker.all.shuffle
+    @single_maker = @maker.first
+    @maker_without_chosen = @maker.reject { |maker| maker == @single_maker }
+    @maker_random = @maker_without_chosen[0..2]
+    @maker_random << @single_maker
+    @maker_random = @maker_random.shuffle
     erb :game
   end
 

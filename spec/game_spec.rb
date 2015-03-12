@@ -22,9 +22,9 @@ feature 'start playing' do
   before(:each) { 
       Maker.create(name: 'sean',
                   path: '/public/images/sean.jpeg')
-}
+  }
 
-  scenario 'the user sees a picture' do
+  scenario 'the user sees a random picture' do
     visit '/game'
     expect(page).to have_css("img[src*='images/sean.jpeg']")
   end
